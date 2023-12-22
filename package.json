@@ -1,0 +1,14 @@
+{
+  "name": "wallswitches",
+  "version": "1.0.0",
+  "description": "Define clases para el control de los wallswitches",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aitor Forero",
+  "license": "ISC",
+  "dependencies": {
+    "openhab": "^4.7.2"
+  }
+}
