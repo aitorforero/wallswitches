@@ -18,7 +18,6 @@ class TwoTogglesOneBlind extends TwoTogglesWallSwitch {
      */
     constructor(id, name, items, toggleStateDescription, blindStatesDescription) {
         super(id, name, items, toggleStateDescription);
-
         let twoTogglesState = this.getState(0);
 
         let blindStates = WallSwitchState.createPersianaStates(
@@ -30,9 +29,9 @@ class TwoTogglesOneBlind extends TwoTogglesWallSwitch {
 
         this.addState(blindStates);
 
-        twoTogglesState.both = (command) => {
+        twoTogglesState.both = (command) => { 
             if (command === "click") {
-                // move to idle
+                console.debug("Moving to first blind state");
                 twoTogglesState.owner.setState(blindStates[0]);
             }
         };

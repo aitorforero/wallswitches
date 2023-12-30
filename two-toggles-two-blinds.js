@@ -22,6 +22,7 @@ class TwoTogglesTwoBlinds extends TwoTogglesOneBlind {
 
         let TwoTogglesState = this.getState(0);
 
+
         let secondBlindStates = WallSwitchState.createPersianaStates(
             secondBlindStatesDescription.id,
             secondBlindStatesDescription.text,
@@ -39,10 +40,9 @@ class TwoTogglesTwoBlinds extends TwoTogglesOneBlind {
         }
 
 
-        this.getState(1).both(setSecondBlindState);
-        this.getState(2).both(setSecondBlindState);
-        this.getState(3).both(setSecondBlindState);
-
+        this.getState(1).both = setSecondBlindState;
+        this.getState(2).both = setSecondBlindState;
+        this.getState(3).both = setSecondBlindState;
 
     }
 
